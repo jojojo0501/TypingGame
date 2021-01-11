@@ -1,0 +1,38 @@
+#main {
+  text-align: center;
+}
+
+#content {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+#yomi {
+  top: 40px;
+  position: relative;
+}
+
+#mondai {
+  display: flex;
+  justify-content: center;
+  font-size: 2.4rem;
+}
+
+.text {
+  padding: 2px;
+}
+
+.text.default {
+  color: #f3f3f3;
+  text-shadow: 1px 1px 0 #000,
+              -1px 1px 0 #000,
+              1px -1px 0 #000,
+              -1px -1px 0 #000;
+}
+
+.text.correct {
+  color: black;
+  text-shadow: none;
+}
