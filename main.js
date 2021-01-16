@@ -4,6 +4,8 @@ $(function() {
   const $mondai = $('#mondai');
   const $finishPanel = $('#finish-panel');
   const $countSelect = $('#count-select');
+  const $correctMessage = $('#correct-message');
+  const $mistakeMessage = $('#mistake-message');
   
   // 問題用の変数の初期化
   let char_index = 1;
@@ -11,6 +13,9 @@ $(function() {
   let question_number = 1;
   let question_limit = 3;
   let done_questions = {};
+  let typing_cnt = 0; //タイプした合計
+  let correct_cnt = 0; //正解タイプ数
+  let mistake_cnt = 0; //間違えたタイプ数
   
   // 問題
   const MONDAI_LIST = [
@@ -35,6 +40,7 @@ $(function() {
   });
 
   $(document).on('keypress', function(e){
+    typing_cnt++;
     // console.log('key:'+e.key);
     const $target = $('#char-'+char_index);
     const char = $target.text();
@@ -42,6 +48,9 @@ $(function() {
       $target.removeClass('default');
       $target.addClass('correct');
       char_index++;
+      correct_cnt++;
+    }else{
+      mistake_cnt++;
     }
     
     if (max_length < char_index) {
@@ -69,6 +78,8 @@ $(function() {
     $finishPanel.removeClass('hidden');
     $yomi.hide();
     $mondai.hide();
+    $correctMessage.text('正解数：' +correct_cnt+'/' +typing_cnt+' ('+ Math.floor(correct_cnt/typing_cnt * 100)+'%)');
+    $mistakeMessage.text('間違い数：'+mistake_cnt+'/'+typing_cnt+' ('+ Math.floor(mistake_cnt/typing_cnt * 100)+'%)');
   }
   
   function changeQuestionWord(index) {
@@ -76,7 +87,7 @@ $(function() {
     max_length = word.length;
     let newHtml = '';
     for (var i = 0; i < max_length; i++) {
-       newHtml += '<p id="char-'+(i+1)+'" class="text default">'+word[i]+'</p>';
+      newHtml += '<p id="char-'+(i+1)+'" class="text default">'+word[i]+'</p>';
     }
     $mondai.html(newHtml);
     $yomi.text(MONDAI_LIST[index]['yomi']);
