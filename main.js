@@ -23,16 +23,26 @@ $(function() {
   
   // 問題
   const MONDAI_LIST = [
-    {yomi:'ごはん', text:'gohan'},
-    {yomi:'おすし', text:'osushi'},
-    {yomi:'サイフ', text:'saifu'},
-    {yomi:'バナナ', text:'banana'},
-    {yomi:'くつした', text:'kutsushita'},
-    {yomi:'なべ', text:'nabe'},
-    {yomi:'あし', text:'ashi'},
-    {yomi:'パソコン', text:'pasokon'},
-    {yomi:'けいたい', text:'keitai'},
-    {yomi:'ふとん', text:'futon'},
+    {yomi:'is', text:'is'},
+    {yomi:'can', text:'can'},
+    {yomi:'should', text:'should'},
+    {yomi:'has', text:'has'},
+    {yomi:'needs', text:'needs'},
+    {yomi:'create', text:'create'},
+    {yomi:'new', text:'new'},
+    {yomi:'from', text:'from'},
+    {yomi:'update', text:'update'},
+    {yomi:'delete', text:'delete'},
+    {yomi:'remove', text:'remove'},
+    {yomi:'save', text:'save'},
+    {yomi:'store', text:'store'},
+    {yomi:'commit', text:'commit'},
+    {yomi:'clear', text:'clear'},
+    {yomi:'reset', text:'reset'},
+    {yomi:'find', text:'find'},
+    {yomi:'get', text:'get'},
+    {yomi:'search', text:'serch'},
+    {yomi:'count', text:'count'},
   ];
   
   $yomi.hide();
