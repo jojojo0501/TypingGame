@@ -1,17 +1,70 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 #main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/apple.png);
+  background-repeat: repeat;
+  background-size: cover;
   text-align: center;
 }
 
+.container {
+  position: absolute;
+  left:20%;
+  margin-top: 5vh;
+  border-radius: 20%;
+  padding: 10px;
+  width: 50%;
+  height:80%;
+  background:#F0FFF0;
+}
+
+.container h1 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 50px;
+  margin-bottom: 0;
+  color:#FFCCCC;
+  text-shadow: 2px 2px 2px #FF0033,
+  -2px 2px 2px #FF0033,
+  2px -2px 2px #FF0033,
+  -2px -2px 2px #FF0033;
+}
+.container h3 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 18px;
+  color:#333;
+
+}
+
 #content {
-  border: 2px solid black;
   border-radius: 10px;
   width: 400px;
   margin: 0 auto;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+#start-message {
+  color:#FFCCCC;
+  text-shadow: 2px 2px 2px #FF0033,
+              -2px 2px 2px #FF0033,
+              2px -2px 2px #FF0033,
+              -2px -2px 2px #FF0033;
+  font-size: 26px;
 }
 
 #yomi {
   top: 40px;
   position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 36px;
+  color:#333;
 }
 
 #mondai {
@@ -19,37 +72,51 @@
   justify-content: center;
   font-size: 2.4rem;
 }
+#mondai p {
+margin: 0;
+}
 
 .text {
   padding: 2px;
+  font-size: 72px;
 }
 
 .text.default {
-  color: #f3f3f3;
-  text-shadow: 1px 1px 0 #000,
-              -1px 1px 0 #000,
-              1px -1px 0 #000,
-              -1px -1px 0 #000;
+  color:#F0FFF0;
+  text-shadow: 2px 2px 2px #32CD32,
+              -2px 2px 2px #32CD32,
+              2px -2px 2px #32CD32,
+              -2px -2px 2px #32CD32;
 }
 
 .text.correct {
-  color: black;
-  text-shadow: none;
+  color: #FFCCCC;
+  text-shadow: 2px 2px 2px #FF0033,
+  -2px 2px 2px #FF0033,
+  2px -2px 2px #FF0033,
+  -2px -2px 2px #FF0033;
 }
 
 #start-button {
+  margin-top: 20px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 1.0em;
   font-weight: bold;
+  border-radius: 10%;
   padding: 10px 30px;
-  background: #248;
+  background: #FF0033;
   color: #fff;
   border-style: none;
   cursor: pointer;
 }
 
 #finish-panel {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  letter-spacing: 0.2;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 30px;
+  color:#333;
 }
 
 .hidden {
